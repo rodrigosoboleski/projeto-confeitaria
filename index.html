@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delícias Artesanais</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div id="logo"><img src="img/logo-mini.png" alt=""></div>
         <nav>
-                <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Cardápio</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Cardápio</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <section class="intro">
-            Confeitaria especializada em tornar seus momentos ainda mais especiais. <br> Com ingredientes frescos e um toque artesanal, oferecemos bolos, cupcakes e doces que encantam pelo sabor e beleza. Cada criação é feita com carinho, garantindo qualidade em cada detalhe.
+            Confeitaria especializada em tornar seus momentos ainda mais especiais. <br> Com ingredientes frescos e um
+            toque artesanal, oferecemos bolos, cupcakes e doces que encantam pelo sabor e beleza. Cada criação é feita
+            com carinho, garantindo qualidade em cada detalhe.
         </section>
+        <!--==============================================-->
         <section class="carousel">
             <div class="slides">
                 <img src="img/bolo2.jpg" alt="Imagem 1">
@@ -33,13 +40,32 @@
                 <img src="img/cupcake2.jpg" alt="Imagem 6">
             </div>
         </section>
-        <a href=""><div class="button">Acesse o cardápio</div></a>
-        
+        <a href="">
+            <div class="button">Acesse o cardápio</div>
+        </a>
+        <!--==============================================-->
+        <section class="area-sobre">
+
+        </section>
+        <!--==============================================-->
+        <section class="area-form">
+            <h1>Entre em Contato</h1>
+            <form action="/enviar-formulario" method="post">
+                <input type="text" id="nome" name="nome" placeholder="Nome:" required>
+                <input type="email" id="email" name="email" placeholder="E-mail:" required>
+                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem:" required></textarea>
+                <br>
+                <input class="enviar" type="submit" value="Enviar">
+            </form>
+        </section>
+
     </main>
     <footer>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, eveniet provident. Fuga possimus, omnis, assumenda iste cum, eius sunt autem cupiditate enim nam dolorem! Repellat impedit accusamus animi in at.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, eveniet provident. Fuga possimus, omnis, assumenda
+        iste cum, eius sunt autem cupiditate enim nam dolorem! Repellat impedit accusamus animi in at.
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
