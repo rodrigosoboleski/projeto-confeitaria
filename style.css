@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --turquesa: #ABCBAB;
     --rosinha: #c095ad;
     --creme: #e0d6c0;
+    --Montserrat: montserrat, Arial, sans-serif;
+    --Poppins: poppins, Arial, sans-serif;
 }
-body{
+*{
     margin: 0;
-    font-family: poppins, Arial, sans-serif;
+    padding: 0;
+    font-family:var(--Poppins);
 }
 /*=======================================================*/
 header {
@@ -54,12 +58,17 @@ main{
     margin: auto;
     padding-top: 50px;
 }
-.intro{
-    max-width: 800px;
+.area-intro{
+    width: 800px;
     text-align: center;
     margin: auto;
-    padding: 20px;
+    padding-bottom: 20px;
 }
+.area-intro h1{
+    font-family:var(--Montserrat);
+    margin: 10px;
+}
+
 /*=======================================================*/
 .carousel {
     position: relative;
@@ -98,12 +107,51 @@ a {
     color: white;
 }
 /*===============================================*/
+
+.area-sobre{
+    text-align: center;
+    width: 1000px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 5px;
+    border: 2px solid #928260 ;
+    border-radius: 10px;
+    background-color: var(--creme);
+}
+.area-sobre div{
+    min-height: 400px;
+}
+.area-sobre .texto-sobre{
+    text-align: center;
+
+}
+.texto-sobre h2{
+    padding-top: 30px;
+}
+.texto-sobre p{
+    margin: 20px 40px;
+}
+.texto-sobre button{
+    background-color: var(--turquesa);
+    border: 2px solid #4f6e4f;
+    border-radius: 10px;
+    font-weight: 600;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+.area-sobre .img-sobre{
+    background: url(img/equipe.webp) center no-repeat;
+    background-size: 400px;
+}
+/*===============================================*/
 .area-form{
     background-color: var(--turquesa);
     border: 3px solid #739173;
     border-radius: 10px;
     max-width: 500px;
-    margin: auto;
+    margin: 70px auto;
     padding: 10px;
     text-align: center;
 }
@@ -122,20 +170,113 @@ textarea{
     height: 40px;
 }
 .area-form .enviar{
-    background-color: var(--creme);
-    border: 1px solid var(--creme);
-    width: 150px;
-    height: 30px;
+    background-color: var(--rosinha);
+    border: 2px solid #8f5a77;
+    width: 100px;
+    height: 40px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 700;
+}
+.enviar:hover{
+    background-color: #8f5a77;
+    color: white;
+    transition: 0.5s ease;
 }
 /*===============================================*/
 footer {
-    margin-top: 100px;
-    background-color: cornflowerblue;
-    padding: 20px;
-    text-align: center;
+    background-color: #e0d6c0;
+    padding: 40px 20px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-about h3,
+.footer-links h4,
+.footer-social h4 {
+    color: #c095ad;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    line-height: 1.5;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #c095ad;
+}
+
+.footer-social a {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-social {
+        text-align: center;
+    }
+}
+
 /*===============================================*/
 /* Ajustes para telas menores (smartphones) */
 @media (max-width: 768px) {
